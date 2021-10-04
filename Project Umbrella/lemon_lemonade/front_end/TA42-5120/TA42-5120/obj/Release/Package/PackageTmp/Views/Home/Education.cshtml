@@ -1,0 +1,479 @@
+﻿<!--Rtriving from https://www.sitepoint.com/simple-javascript-quiz/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+          rel="stylesheet" />
+
+    <!-- MDB -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: 'Work Sans', sans-serif;
+            color: #333;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 500;
+            margin: 0px;
+            padding: 10px;
+            font-size: 60px;
+            color: rgb(229, 255, 0);
+        }
+
+        .container {
+            margin: 30px auto;
+            padding: 20px 15px
+        }
+
+        .question {
+            font-weight: 600;
+            font-size: 19px;
+            margin-bottom: 10px;
+            margin: 0%;
+        }
+
+        .selections {
+            margin-bottom: 20px;
+            text-align: left;
+            display: inline-block;
+            font-size: 17px;
+        }
+
+            .selections label {
+                display: block;
+            }
+
+        .explains {
+            margin-bottom: 20px;
+            text-align: left;
+            display: block;
+        }
+
+        .explanation {
+            margin-bottom: 20px;
+            text-align: left;
+            display: none;
+        }
+
+        button {
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color: #279;
+            color: #fff;
+            border: 0px;
+            border-radius: 3px;
+            padding: 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+            button:hover {
+                background-color: #38a;
+            }
+
+        label {
+            display: flex;
+            margin-top: 10px;
+            padding: 10px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid #ddd
+        }
+
+        #one:checked ~ label.first,
+        #two:checked ~ label.second,
+        #three:checked ~ label.third,
+        #four:checked ~ label.forth,
+        #five:checked ~ label.fifth,
+        #six:checked ~ label.sixth,
+        #seven:checked ~ label.seveth,
+        #eight:checked ~ label.eighth {
+            border-color: #8e498e
+        }
+
+            #one:checked ~ label.first .circle,
+            #two:checked ~ label.second .circle,
+            #three:checked ~ label.third .circle,
+            #four:checked ~ label.forth .circle,
+            #five:checked ~ label.fifth .circle,
+            #six:checked ~ label.sixth .circle,
+            #seven:checked ~ label.seveth .circle,
+            #eight:checked ~ label.eighth .circle {
+                border: 6px solid #8e498e;
+                background-color: #fff
+            }
+
+        label:hover {
+            background: #fbe9c5
+        }
+
+        .carosel_button {
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            .carosel_button:hover {
+                background-color: yellow;
+                color: black;
+            }
+
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            border-radius: 15px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 50%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #000000;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        .congrat_img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body style="margin-top: 80px !important">
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('../../assets/img/quiz_title1.png'); ">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-10 col-xl-10">
+                    <div class="page-heading">
+                        <h1 style="color: #ffc107">Sun Safety Quiz</h1>
+                        <br />
+                        <span class="subheading">Let's check on the knowledge about UV rays and sun protection</span>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Page Header-->
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-9">
+                <div id="quiz" class="text-align"></div>
+                <div class="card">
+                    <div class="card-body p-5">
+                        <div id="results" class="text-align"></div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center"> <button id="submit" class="carosel_button"> SUBMIT</button> </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal_result" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close_result">&times;</span>
+            <span id="mark"></span>
+            <span id="congrat"></span>
+            <span id="congrat_img"></span>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            const quizContainer = document.getElementById('quiz');
+            const resultsContainer = document.getElementById('results');
+            const submitButton = document.getElementById('submit');
+
+            const myQuestions = [
+                {
+                    topic: '@ViewBag.topic1',
+                    question: '@ViewBag.question1',
+                    answer: '@ViewBag.answer1',
+                    explanation: '@ViewBag.explanation1',
+                    selection_1: '@ViewBag.selection11',
+                    selection_2: '@ViewBag.selection12'
+                },
+                {
+                    topic: '@ViewBag.topic2',
+                    question: '@ViewBag.question2',
+                    answer: '@ViewBag.answer2',
+                    explanation: '@ViewBag.explanation2',
+                    selection_1: '@ViewBag.selection21',
+                    selection_2: '@ViewBag.selection22'
+                },
+                {
+                    topic: '@ViewBag.topic3',
+                    question: '@ViewBag.question3',
+                    answer: '@ViewBag.answer3',
+                    explanation: '@ViewBag.explanation3',
+                    selection_1: '@ViewBag.selection31',
+                    selection_2: '@ViewBag.selection32'
+                },
+                {
+                    topic: '@ViewBag.topic4',
+                    question: '@ViewBag.question4',
+                    answer: '@ViewBag.answer4',
+                    explanation: '@ViewBag.explanation4',
+                    selection_1: '@ViewBag.selection41',
+                    selection_2: '@ViewBag.selection42'
+                },
+                {
+                    topic: '@ViewBag.topic5',
+                    question: '@ViewBag.question5',
+                    answer: '@ViewBag.answer5',
+                    explanation: '@ViewBag.explanation5',
+                    selection_1: '@ViewBag.selection51',
+                    selection_2: '@ViewBag.selection52'
+                },
+                {
+                    topic: '@ViewBag.topic6',
+                    question: '@ViewBag.question6',
+                    answer: '@ViewBag.answer6',
+                    explanation: '@ViewBag.explanation6',
+                    selection_1: '@ViewBag.selection61',
+                    selection_2: '@ViewBag.selection62'
+                },
+                {
+                    topic: '@ViewBag.topic7',
+                    question: '@ViewBag.question7',
+                    answer: '@ViewBag.answer7',
+                    explanation: '@ViewBag.explanation7',
+                    selection_1: '@ViewBag.selection71',
+                    selection_2: '@ViewBag.selection72'
+                }
+            ];
+
+            // Function to return questions
+            function buildQuiz() {
+                // variable to store the HTML output
+                var output = [];
+
+                // for each question...
+                //questionNumber is myQuestions' index
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+
+                    // variable to store the list of possible selections
+                    const selections = [];
+                    const explains = []
+
+                    // ATTENTION !!!!!!!!!!!!!!!
+                    // Put an if-else statement here to match currentQuestion.topic with the navigation link
+                    selections.push(
+                        `<label><input type="radio" name="question${questionNumber}" value="${currentQuestion.selection_1}">${currentQuestion.selection_1}</label>`,
+                        `<label><input type="radio" name="question${questionNumber}" value="${currentQuestion.selection_2}">${currentQuestion.selection_2}</label>`
+                    );
+
+                    var topic = `${currentQuestion.topic}`;
+                    if (topic === 'Eye damage')
+                        explains.push(`<div class="explanation"> Topic:<a href= "@Url.Action("Eyedamage", "DamTre")"> ${currentQuestion.topic}</a></div>`);
+                    if (topic === 'Skin damage')
+                        explains.push(`<div class="explanation"> Topic:<a href= "@Url.Action("Skindamage", "DamTre")"> ${currentQuestion.topic}</a></div>`);
+                    if (topic === 'Sunscreen')
+                        explains.push(`<div class="explanation"> Topic:<a href= "@Url.Action("Suncream", "Protector")"> ${currentQuestion.topic}</a></div>`);
+                    if (topic === 'Sunglasses')
+                        explains.push(`<div class="explanation"> Topic:<a href= "@Url.Action("Sunglasses", "Protector")"> ${currentQuestion.topic}</a></div>`);
+                    if (topic === 'Cloth')
+                        explains.push(`<div class="explanation"> Topic:<a href= "@Url.Action("Cloth", "Protector")"> ${currentQuestion.topic}</a></div>`);
+                    if (topic === 'UVR')
+                        explains.push(`<div class="explanation"> Topic:<a href= "@Url.Action("Index", "Home")"> ${currentQuestion.topic}</a></div>`);
+                    if (topic === 'Hat')
+                        explains.push(`<div class="explanation"> Topic:<a href= "@Url.Action("Hat", "Protector")"> ${currentQuestion.topic}</a></div>`);
+
+                    explains.push(
+                        `<div class="explanation"> Hint: ${currentQuestion.explanation}</div>`,
+                    );
+
+                    // add this question and its selections to the output
+                    output.push(
+                        `
+                    <div class = "card">
+                        <div class="card-body p-5">
+                            <div class="question"> ${currentQuestion.question} </div>
+                            <div class="row">
+                                    <div class="selections"> ${selections.join('')} </div>
+                            <div class="explains"> ${explains.join('')} </div>
+                            </div>
+                        </div>
+                    </div>
+                    `
+                    );
+                });
+
+                // finally combine our output list into one string of HTML and put it on the page
+                quizContainer.innerHTML = output.join('');
+            }
+
+            function mark_result(mark) {
+                if (mark < 3) {
+                    return "Don't worry next time you'll do it better"
+                }
+                else if (mark >= 3 && mark < 5) {
+                    return "Good Job"
+                }
+                else if (mark >= 5 && mark < 7) {
+                    return "Well Done!"
+                }
+                else {
+                    return "Excellent!"
+                }
+            }
+
+            function get_congrat_img(mark) {
+                if (mark < 3) {
+                    return "keepup.png"
+                }
+                else if (mark >= 3 && mark < 5) {
+                    return "goodjob.png"
+                }
+                else if (mark >= 5 && mark < 7) {
+                    return "welldone.png"
+                }
+                else {
+                    return "excellent.png"
+                }
+            }
+
+            function showResults() {
+                // gather answer containers from our quiz
+                const answerContainers = quizContainer.querySelectorAll('.selections');
+                const explainContainers = quizContainer.querySelectorAll('.explains');
+                // keep track of user's selections
+                let numCorrect = 0;
+
+                // for each question...
+                myQuestions.forEach((currentQuestion, questionNumber) => {
+
+                    var all_ele = explainContainers[questionNumber].getElementsByClassName("explanation")
+                    Array.prototype.forEach.call(all_ele, function (ele) {
+                        ele.style.display = 'none';
+                    });
+
+                    // find selected answer
+                    const answerContainer = answerContainers[questionNumber];
+                    const selector = `input[name=question${questionNumber}]:checked`;
+                    const userAnswer = (answerContainer.querySelector(selector) || {}).value;
+                    console.log(userAnswer);
+                    console.log(currentQuestion.answer);
+                    
+                    // if answer is correct
+                    if (userAnswer === currentQuestion.answer) {
+                        // add to the number of correct selections
+                        numCorrect++;
+                        // color the selections green
+                        answerContainers[questionNumber].style.color = 'green';
+                    }
+                    // if answer is wrong or blank
+                    else {
+                        // color the selections red
+                        answerContainers[questionNumber].style.color = 'red';
+                        var all_ele = explainContainers[questionNumber].getElementsByClassName("explanation")
+                        Array.prototype.forEach.call(all_ele, function (ele) {
+                            ele.style.display = 'block';
+                        });
+                    }
+                });
+
+                // show number of correct selections out of total
+                resultsContainer.innerHTML = `You have ${numCorrect} answer(s) correct.`;
+
+                // Show the pop-up message
+                document.getElementById('congrat').innerHTML = `<h3 class="congrat_text"><b>${mark_result(numCorrect)}</b></h3>`;
+                document.getElementById('congrat_img').innerHTML = `<img class="congrat_img" src="../../assets/img/${get_congrat_img(numCorrect)}" alt="Congratulation">`;
+                document.getElementById("modal_result").style.display = "block";
+            }
+
+
+            // Kick things off
+            buildQuiz();
+
+            // Event listeners
+            submitButton.addEventListener('click', showResults);
+
+            var close_result = document.getElementById('close_result')
+            var modal_result = document.getElementById('modal_result')
+
+            close_result.onclick = function () {
+                modal_result.style.display = "none";
+            }
+
+            window.onclick = function (event) {
+                if (event.target == modal_result) {
+                    modal_result.style.display = "none";
+                }
+            }
+        })();
+    </script>
+</body>
+</html>
+

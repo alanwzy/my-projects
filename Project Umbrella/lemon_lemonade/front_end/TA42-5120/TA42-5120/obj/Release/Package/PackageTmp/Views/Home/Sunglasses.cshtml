@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sunglass</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .mySlides {
+            display: none;
+        }
+
+        .carosel_button {
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            .carosel_button:hover {
+                background-color: yellow;
+                color: black;
+            }
+        /* Labels for checked inputs */
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        input:checked + span {
+            color: darkorange;
+        }
+
+        input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px yellow;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            border-radius: 15px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
+
+</head>
+<body>
+    <!-- Navigation-->
+    <!-- Page Header-->
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('../../assets/img/sunglasses1.png')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-10 col-xl-10">
+                    <div class="page-heading">
+                        <h1>Sun Glasses</h1>
+                        <span class="subheading">It is important to protect our children’s eyes.</span>
+                        <br />
+                        <span class="subheading">As parents we should always remember to wear sunglasses for our children, because our children are particularly sensitive to UV radiation, skin and eye damage. </span>
+                        <br />
+                        <span class="subheading">Once children are old enough to manage wearing sunglasses, they should be encouraged to do so when doing outdoor activities.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Content-->
+    <!-- Section: Design block -->
+    <section>
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-lg-9">
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <div class='mySlides'>
+                                    <h3 class="section-heading" id="why">Why Sunglasses?</h3>
+
+                                    <p>UV radiation causes both temporary and chronic eye damages when our eyes are exposed to it frequently.</p>
+                                    <p>When the UV level is 3 or above, the Cancer Council suggests wearing sunglasses at all times. </p>
+                                    <p>During the summer in Australia, all regions of the nation are exposed to UV levels of 3 or higher for lengthy periods of time during the day. </p>
+                                    <p>When the sun is low in the sky, our eyes are exposed to UV radiation directly. Reflected and scattered light also have a strong impact and increase the total UV radiation that is exposed to our eyes.</p>
+
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Lens Category</th>
+                                                <th scope="col">Description</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Category 0</td>
+                                                <td>Light tint sunglasses or fashion spectacles</td>
+                                                <td><button class="carosel_button" id="len_0">Open</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Category 1</td>
+                                                <td>Light tint sunglasses or fashion spectacles</td>
+                                                <td><button class="carosel_button" id="len_1">Open</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Category 2</td>
+                                                <td>General purpose sunglasses</td>
+                                                <td><button class="carosel_button" id="len_2">Open</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Category 3</td>
+                                                <td>General purpose sunglasses</td>
+                                                <td><button class="carosel_button" id="len_3">Open</button></td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Category 4</td>
+                                                <td>Very dark special sunglasses – very high sunglare reduction</td>
+                                                <td><button class="carosel_button" id="len_4">Open</button></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div id="len_0_content" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close" id="close_0">&times;</span>
+                                            <label><b>Category 0:</b><br> Provide very limited reduction of sunglare and some UV proteciton.</label>
+                                        </div>
+                                    </div>
+
+                                    <div id="len_1_content" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close" id="close_1">&times;</span>
+                                            <label><b>Category 1:</b><br> Provide limited protection against sunglare and some UV protection; they are not suitable for driving in at night or under dull light conditions.</label>
+                                        </div>
+                                    </div>
+
+                                    <div id="len_2_content" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close" id="close_2">&times;</span>
+                                            <label><b>Category 2:</b><br> Provide good protection against sunglare and good UV protection; they suitable for driving in at night or under dull light conditions.</label>
+                                        </div>
+                                    </div>
+
+                                    <div id="len_3_content" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close" id="close_3">&times;</span>
+                                            <label><b>Category 3:</b><br> Provide high protection against sunglare and good UV protection; they are not suitable for driving at night or under dull light conditions.</label>
+                                        </div>
+                                    </div>
+
+                                    <div id="len_4_content" class="modal">
+                                        <!-- Modal content -->
+                                        <div class="modal-content">
+                                            <span class="close" id="close_4">&times;</span>
+                                            <label><b>Category 4:</b><br> Special purpose sunglasses that provide a very high protection against extreme sun glare and good UV protection, they are not suitable for road use and driving.</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class='mySlides'>
+                                    <h3 class="section-heading" id="Tips">Tips for Parents</h3>
+                                    <p><input type="checkbox">&nbsp;<span>Always put a pair of sunglasses in your children’s bag, so they can put on when needed.</span></p>
+                                    <p><input type="checkbox">&nbsp;<span>Choose a close-fitting, wrap-around style of sunglasses for your children.</span></p>
+                                    <p><input type="checkbox">&nbsp;<span>Choose category 2 or higher glasses for your children as lenses with category above 2 can absorb more than 95% of UV radiation and provide a good protection for your children.</span></p>
+                                    <p><input type="checkbox">&nbsp;<span>Do not use toy sunglasses for your children, as they do not meet the sun protection requirements under the Australian Standard.</span></p>
+                                    <p><input type="checkbox">&nbsp;<span>Choose sunglasses that have soft elastic to keep the glasses in place. Also, choose a style that is safe for children to use, e.g. make sure the arms of glasses don't become a safety hazard.</span></p>
+                                    <p><input type="checkbox">&nbsp;<span>If your children don’t want to wear sunglasses, put on a suitable hat can still help protect their eyes from the damage of UV radiation.</span></p>
+                                </div>
+                                <span class="caption text-muted">
+                                    <button class="carosel_button" onclick="plusDivs(-1)">❮</button>
+                                    <button class="carosel_button" onclick="plusDivs(1)">❯</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <script>
+        // Get the modal
+        var modal_0 = document.getElementById("len_0_content");
+        var modal_1 = document.getElementById("len_1_content");
+        var modal_2 = document.getElementById("len_2_content");
+        var modal_3 = document.getElementById("len_3_content");
+        var modal_4 = document.getElementById("len_4_content");
+
+        var btn_0 = document.getElementById("len_0");
+        var btn_1 = document.getElementById("len_1");
+        var btn_2 = document.getElementById("len_2");
+        var btn_3 = document.getElementById("len_3");
+        var btn_4 = document.getElementById("len_4");
+
+        // When the user clicks the button, open the modal
+        btn_0.onclick = function () {
+            modal_0.style.display = "block";
+        }
+        // When the user clicks the button, open the modal
+        btn_1.onclick = function () {
+            modal_1.style.display = "block";
+        }
+        // When the user clicks the button, open the modal
+        btn_2.onclick = function () {
+            modal_2.style.display = "block";
+        }
+        // When the user clicks the button, open the modal
+        btn_3.onclick = function () {
+            modal_3.style.display = "block";
+        }
+        // When the user clicks the button, open the modal
+        btn_4.onclick = function () {
+            modal_4.style.display = "block";
+        }
+
+        var close_0 = document.getElementById("close_0");
+        var close_1 = document.getElementById("close_1");
+        var close_2 = document.getElementById("close_2");
+        var close_3 = document.getElementById("close_3");
+        var close_4 = document.getElementById("close_4");
+
+
+        close_0.onclick = function () {
+            modal_0.style.display = "none";
+        }
+        close_1.onclick = function () {
+            modal_1.style.display = "none";
+        }
+        close_2.onclick = function () {
+            modal_2.style.display = "none";
+        }
+        close_3.onclick = function () {
+            modal_3.style.display = "none";
+        }
+        close_4.onclick = function () {
+            modal_4.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal_0) {
+                modal_0.style.display = "none";
+            }
+            if (event.target == modal_1) {
+                modal_1.style.display = "none";
+            }
+            if (event.target == modal_2) {
+                modal_2.style.display = "none";
+            }
+            if (event.target == modal_3) {
+                modal_3.style.display = "none";
+            }
+            if (event.target == modal_4) {
+                modal_4.style.display = "none";
+            }
+        }
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) { showDivs(slideIndex += n); }
+
+        function currentDiv(n) { showDivs(slideIndex = n); }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-red", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-red";
+        }
+
+    </script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,6 @@
+UVR,PA,Desc,SPF,UVB_percentage,Situation
+low,1,Some UVA protection,4,75,
+relative low,2,Moderate UVA protection. ,8,87.5,
+moderate,3,High UVA protection.,15,93.3,"every day, occasional exposure"
+high,4,Extremely High UVA protection.,30,96.7,Necessary for extended outdoor activities
+extremely high,4,Extremely High UVA protection.,50,98,beach

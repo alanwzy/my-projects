@@ -1,0 +1,535 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css"
+          rel="stylesheet" />
+
+    <!-- MDB -->
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <style>
+        .leftB {
+            border-left: 6px solid #f0f321;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centerP {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .skinPic {
+            border: 1px solid rgb(19, 20, 4);
+            padding: 5px;
+        }
+
+        .cite {
+            text-align: right;
+            font-size: 15px;
+            color: gray;
+        }
+
+        .carosel_button {
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            .carosel_button:hover {
+                background-color: yellow;
+                color: black;
+            }
+        /* Labels for checked inputs */
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        input:checked + span {
+            color: darkorange;
+        }
+
+        input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px yellow;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            border-radius: 15px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        td, th {
+            text-align: center
+        }
+    </style>
+
+</head>
+
+<body style="margin-top: 80px !important">
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('../../assets/img/protectorSport.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-10 col-xl-10">
+                    <div class="page-heading">
+                        <h1>Tips for Doing Sports</h1>
+                        <br />
+                        <span class="subheading">Use our top tips to help you stay sun safe.</span>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Page Header-->
+    <!-- Section: Design block -->
+    <section>
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-lg-9">
+
+                    <div class="card mb-2">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <h3 id="Types"><strong> 1. Cover your skin as much as you can:</strong></h3>
+                                <div class="leftB">
+                                    <p>
+                                        Wear clothing that covers as much skin as possible while still being comfortable. UV can reach anywhere on your skin if it is not covered. Wear loose-fitting, cool clothing with UPF labels to help block UV. When doing sports that are not competitive or when UPF cloth is not avaliable, put on a comfortable shirt or t-shirt that cover as much skin as possible for protection.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card mb-2">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <h3 id="Types"><strong>2. Always apply sunscreen and reapply frequently: </strong></h3>
+                                <div class="leftB">
+                                    <p>
+                                        Put on SPF30 (or higher) broad-spectrum sunscreen to any parts of skin not covered by clothing. Sunscreen won’t provide 100% protection but used in conjunction with other sun protection methods it will greatly reduce your risk of skin damage. Apply sunscreen at least 20 minutes before heading out. Also remember to reapply at least every two hours and more regularly if you’re sweating.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card mb-2">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <h3 id="Types"><strong>3. Minimize your UV exposure with hat: </strong></h3>
+                                <div class="leftB">
+                                    <p>
+                                        Wear a broad-brim or bucket hat to help provide shades to face, neck and ear. However, it won’t provide full protection to your head. Do not forget to apply sunscreen to your cheeks, chin, ears and neck where these parts will be particularly vulnerable under intense sunlight.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card mb-2">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <h3 id="Types"><strong>4. Select the right time to go out: </strong></h3>
+                                <div class="leftB">
+                                    <p>
+                                        Try to exercise earlier in the morning or later in the day when the sun’s UV isn’t as intense. Also, remember to stay hydrated and take a break in the shade when needed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card mb-2">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <h3 id="Types"><strong>5. Protect your eye with sunglasses: </strong></h3>
+                                <div class="leftB">
+                                    <p>
+                                        Wear sunglasses to help protect your eyes from getting exposed to UV radiation and sun glare directly. They can also help protect your eyes from wind, dust, grit and bugs. For best protection, choose a wrap-around style that meets the Australian Standard (AS/NZS 1067).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card mb-2">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <h3 id="Types"><strong> Advice for sports & exercises </strong></h3>
+                                <button class="carosel_button" id="walking_button">Walking</button>
+                                <div id="walking_modal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" id="close_walking">&times;</span>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <h3 id="Types"><strong>Tips for walking </strong></h3>
+                                                    <li>Always remember to wear sunglasses when UV radiation is high. Roads and paths can reflect high levels of UV, so eye protection is important when walking.</li>
+                                                    <li>Look for shady walking paths and tracks whenever possible.</li>
+                                                </div>
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                                                        <img src="~/assets/img/walking.jpeg" class="img-fluid" />
+                                                        <a href="#!">
+                                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carosel_button" id="running_button">Running</button>
+                                <div id="running_modal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" id="close_running">&times;</span>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <h3 id="Types"><strong>Tips for running</strong></h3>
+                                                    <li>Try to run earlier in the morning or later in the day when the sun's UV is not as intense – particularly for long runs.</li>
+                                                    <li>For running, wear a legionnaire hat with a peak at the front and long flap for best protection.</li>
+                                                    <li>Always remember to wear sunglasses when UV radiation is high. Roads and paths can reflect high levels of UV so eye protection is important when walking.</li>
+                                                </div>
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                                                        <img src="~/assets/img/running.jpg" class="img-fluid" />
+                                                        <a href="#!">
+                                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carosel_button" id="swimming_button">Swimming</button>
+                                <div id="swimming_modal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" id="close_swimming">&times;</span>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <h3 id="Types"><strong>Tips for swimming</strong></h3>
+                                                    <li>
+                                                        Make sure to apply sunscreen to your face, neck, shoulders, back and back of your legs because those parts will be particularly vulnerable during the swim.
+                                                    </li>
+                                                    <li>
+                                                        Remember that sunscreen is water-resistant, not waterproof. Apply sunscreen at least 20 minutes before diving in the water. Do not forget to reapply sunscreen at least every two hours as the water will have washed it off.
+                                                    </li>
+                                                    <li>
+                                                        Wear bathers and rashies labelled UPF50 to help block UV if possible. Otherwise, try to cover yourself up with a shirt or wrap when you get out of water.
+                                                    </li>
+                                                    <li>Put on swimming goggles that have UV protection to help protect your eyes. When you have finished your swim, swap the goggles for sunglasses.</li>
+                                                </div>
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                                                        <img src="~/assets/img/swimming.jpg" class="img-fluid" />
+                                                        <a href="#!">
+                                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carosel_button" id="cycling_button">Cycling</button>
+                                <div id="cycling_modal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" id="close_cycling">&times;</span>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <h3 id="Types"><strong>Tips for cycling</strong></h3>
+                                                    <li>
+                                                        Remember to apply sunscreen to the tops of your hands and the back of your neck which are often forgotten.
+                                                    </li>
+                                                    <li>
+                                                        Back of your legs become vulnerable when you lean forwards on a bike, protect your legs by covering it with cloth or applying sunscreen.
+                                                    </li>
+                                                    <li>
+                                                        Look for a dry touch or active formula that won't make the handlebars greasy.
+                                                    </li>
+                                                </div>
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                                                        <img src="~/assets/img/cycling.jpg" class="img-fluid" />
+                                                        <a href="#!">
+                                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carosel_button" id="football_button">Football</button>
+                                <div id="football_modal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" id="close_football">&times;</span>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <h3 id="Types"><strong>Tips for football</strong></h3>
+                                                    <li>
+                                                        Consider a dry touch or active formula that won't be greasy and impact your grip on the ball.
+                                                    </li>
+                                                    <li>
+                                                        Keep yourself hydrated and reapply sunscreen during breaks.
+                                                    </li>
+                                                </div>
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                                                        <img src="~/assets/img/football.jpg" class="img-fluid" />
+                                                        <a href="#!">
+                                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carosel_button" id="cricket_button">Cricket</button>
+                                <div id="cricket_modal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" id="close_cricket">&times;</span>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <h3 id="Types"><strong>Tips for cricket</strong></h3>
+                                                    <li>
+                                                        If you are in the slips and fear dropping a catch, look for a dry touch or active formula that won't be greasy.
+                                                    </li>
+                                                    <li>
+                                                        Keep yourself hydrated and reapply sunscreen during breaks.
+                                                    </li>
+                                                </div>
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                                                        <img src="~/assets/img/cricket.jpg" class="img-fluid" />
+                                                        <a href="#!">
+                                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button class="carosel_button" id="tennis_button">Tennis</button>
+                                <div id="tennis_modal" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close" id="close_tennis">&times;</span>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <h3 id="Types"><strong>Tips for Tennis</strong></h3>
+                                                    <li>
+                                                        Take a break under shade between games and try to schedule training and matches earlier in the morning or later in the day when the sun's UV is not as intense.
+                                                    </li>
+                                                    <li>
+                                                        Look for a dry touch or active formula that won't be greasy and impact your racquet grip.
+                                                    </li>
+                                                    <li>Wear sports clothing that covers as much skin as possible. </li>
+                                                </div>
+                                                <div class="col-md-5 gx-5 mb-4">
+                                                    <div class="bg-image hover-overlay ripple shadow-2-strong rounded-5" data-mdb-ripple-color="light">
+                                                        <img src="~/assets/img/tennis1.png" class="img-fluid" />
+                                                        <a href="#!">
+                                                            <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get the buttons
+        var walking_button = document.getElementById("walking_button");
+        var running_button = document.getElementById("running_button");
+        var swimming_button = document.getElementById("swimming_button");
+        var cycling_button = document.getElementById("cycling_button");
+        var football_button = document.getElementById("football_button");
+        var cricket_button = document.getElementById("cricket_button");
+        var tennis_button = document.getElementById("tennis_button");
+        // Get the modal
+        var walking_modal = document.getElementById("walking_modal");
+        var running_modal = document.getElementById("running_modal");
+        var swimming_modal = document.getElementById("swimming_modal");
+        var cycling_modal = document.getElementById("cycling_modal");
+        var football_modal = document.getElementById("football_modal");
+        var cricket_modal = document.getElementById("cricket_modal");
+        var tennis_modal = document.getElementById("tennis_modal");
+
+
+        // When the user clicks the button, open the modal
+        walking_button.onclick = function () {
+            walking_modal.style.display = "block";
+        }
+        running_button.onclick = function () {
+            running_modal.style.display = "block";
+        }
+        swimming_button.onclick = function () {
+            swimming_modal.style.display = "block";
+        }
+        cycling_button.onclick = function () {
+            cycling_modal.style.display = "block";
+        }
+        football_button.onclick = function () {
+            football_modal.style.display = "block";
+        }
+        cricket_button.onclick = function () {
+            cricket_modal.style.display = "block";
+        }
+        tennis_button.onclick = function () {
+            tennis_modal.style.display = "block";
+        }
+
+        var close_walking = document.getElementById("close_walking");
+        var close_running = document.getElementById("close_running");
+        var close_swimming = document.getElementById("close_swimming");
+        var close_cycling = document.getElementById("close_cycling");
+        var close_football = document.getElementById("close_football");
+        var close_cricket = document.getElementById("close_cricket");
+        var close_tennis = document.getElementById("close_tennis");
+
+        close_walking.onclick = function () {
+            walking_modal.style.display = "none";
+        }
+        close_running.onclick = function () {
+            running_modal.style.display = "none";
+        }
+        close_swimming.onclick = function () {
+            swimming_modal.style.display = "none";
+        }
+        close_cycling.onclick = function () {
+            cycling_modal.style.display = "none";
+        }
+        close_football.onclick = function () {
+            football_modal.style.display = "none";
+        }
+        close_cricket.onclick = function () {
+            cricket_modal.style.display = "none";
+        }
+        close_tennis.onclick = function () {
+            tennis_modal.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == walking_modal) {
+                walking_modal.style.display = "none";
+            }
+            if (event.target == running_modal) {
+                running_modal.style.display = "none";
+            }
+            if (event.target == swimming_modal) {
+                swimming_modal.style.display = "none";
+            }
+            if (event.target == cycling_modal) {
+                cycling_modal.style.display = "none";
+            }
+            if (event.target == football_modal) {
+                football_modal.style.display = "none";
+            }
+            if (event.target == cricket_modal) {
+                cricket_modal.style.display = "none";
+            }
+            if (event.target == tennis_modal) {
+                tennis_modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+

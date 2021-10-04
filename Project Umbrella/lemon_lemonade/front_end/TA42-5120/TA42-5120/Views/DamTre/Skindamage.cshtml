@@ -1,0 +1,412 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Skin Damage</title>
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+        .leftB {
+            border-left: 6px solid #f0f321;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centerP {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .skinPic {
+            border: 1px solid rgb(19, 20, 4);
+            padding: 5px;
+        }
+
+        .cite {
+            text-align: right;
+            font-size: 15px;
+            color: gray;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .carosel_button {
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            .carosel_button:hover {
+                background-color: yellow;
+                color: black;
+            }
+        /* Labels for checked inputs */
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        input:checked + span {
+            color: darkorange;
+        }
+
+        input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px yellow;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            border-radius: 15px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        td, th {
+            text-align: center
+        }
+
+        .menu {
+            border-left: 6px solid #2196F3;
+            padding-left: 15px;
+        }
+
+        .leftB {
+            border-left: 6px solid #f0f321;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+
+        /* Carousel styling */
+
+        .headBG {
+            background-image: url('../../assets/img/SunburnHead.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centerP {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-item.active {
+            height: 50vh;
+        }
+
+        .skinPic {
+            border: 1px solid rgb(19, 20, 4);
+            padding: 5px;
+        }
+
+        .cite {
+            text-align: right;
+            font-size: 15px;
+            color: gray;
+        }
+
+        .undli {
+            text-decoration: underline;
+            color: rgb(182, 22, 22);
+        }
+    </style>
+
+</head>
+
+<body style="margin-top: 80px !important">
+    <div class="container-fluid">
+        <div class="row" id="top">
+            <div class="headBG shadow-2-strong carousel-item active">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="text-white text-center center">
+                            <h2 style="color: #ffc107">
+                                It only takes <span style="font-size: 50px;">11 minutes</span><br> for UVR to damage
+                                your skin.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section: Design block -->
+    <section>
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-lg-9">
+                    <div class="card mb-2">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <div class='mySlides'>
+                                    <h3 id="what">What is Sunburn?</h3>
+                                    <div class="leftB">
+                                        <p>
+                                            Sunburn is when your skin turns red, hot, and painful when touched. It appears within a
+                                            couple of hours after intense exposure to UVR from the sunlight (or any other artificial
+                                            sources).
+                                        </p>
+                                        <p>
+                                            Sunburn is the cause of dark spots and wrinkles on the skin. It also increases the risk
+                                            of skin cancer.
+                                        </p>
+                                        <button class="carosel_button" id="sunburn_button">Common symptoms of Sunburn</button>
+                                        <div id="sunburn_modal" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close" id="close_sunburn">&times;</span>
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <p><b>Common symptoms of Sunburn</b></p>
+                                                        <div class="col-md-6">
+                                                            <p class="leftB">
+                                                                The skin turns pink or red.<br />
+                                                                The Skin feels warm or hot.<br />
+                                                                The Skin feels painful when touched.<br />
+                                                                The Skin swells up or has blisters.
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <img src="~/assets/img/Sunburn1.jpg" alt="Sunburn picture" class="skinPic centerP"
+                                                                 style="width: 70%; "><br>
+
+                                                            <p class="cite" style="text-align: left;">
+                                                                Retrieve from:
+                                                                <a href="https://en.wikipedia.org/wiki/Sunburn#/media/File:Sunburn_Treatment_Practices.jpg"
+                                                                   target="_blank">
+                                                                    wikipedia: wikipedia
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='mySlides'>
+                                    <h3 id="Types"><strong>Types of sunburns</strong></h3>
+                                    <h4>First degree</h4>
+                                    <div class="leftB">
+                                        <p>
+                                            The <b>outer layer</b> of the skin is damaged.<br />
+                                            Would heal by itself in a few days (from 3 to 6 days)
+                                        </p>
+                                        <button class="carosel_button" id="degree_1_button">Common symptoms of First Degree Sunburn</button>
+                                        <div id="degree_1_modal" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close" id="close_degree_1">&times;</span>
+                                                <p><b>Common symptoms of First Degree Sunburn</b></p>
+                                                <p class="leftB">
+                                                    The skin turns red and dry.<br />
+                                                    Swellings or Blisterings on the skin that are painful.<br />
+                                                    Peeling skin from 3 to 8 days after exposure.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br /><br />
+                                    <h4>Second degree</h4>
+                                    <div class="leftB">
+                                        <p>
+                                            The <b>2 outer layers</b> of the skin are damaged.<br />
+                                            Would <b>take weeks to heal</b> and require <b>specialist treatment</b>.<br />
+                                            Would leave <b>permanent scars</b>.
+                                        </p>
+                                        <button class="carosel_button" id="degree_2_button">Common symptoms of Second Degree Sunburn</button>
+                                        <div id="degree_2_modal" class="modal">
+                                            <div class="modal-content">
+                                                <span class="close" id="close_degree_2">&times;</span>
+                                                <p><b>Common symptoms of First Degree Sunburn</b></p>
+                                                <p class="leftB">
+                                                    The skin turns deep-red and shiny.<br />
+                                                    Painful swellings or blisterings on a large area of the skin.<br />
+                                                    The burned area turns white (discolored).
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <p><b>Please seek medical treatment immediately if you have the Second degree of sunburn (or worse).</b></p>
+                                    </div>
+
+                                    <h4>Third degree</h4>
+                                    <div class="leftB">
+                                        <p>When the skin is damaged more severely than the Second degree</p>
+                                    </div>
+
+                                    <h4>Fourth degree</h4>
+                                    <div class="leftB">
+                                        <p style="color:red"><b>Needs to be avoided AT ALL COSTS!</b></p>
+                                        <p>
+                                            Not only the skin but also the <b>fat and muscle underneath</b> are damaged. <br />
+                                            Would require <b>surgical treatment</b><br />
+                                            Change the color of the <b>entire skin</b>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page_num"></div>
+                    <span class="caption text-muted">
+                        <button class="carosel_button" onclick="plusDivs(-1)">❮</button>
+                        <button class="carosel_button" onclick="plusDivs(1)">❯</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get the buttons
+        var sunburn_button = document.getElementById("sunburn_button");
+        var degree_1_button = document.getElementById("degree_1_button");
+        var degree_2_button = document.getElementById("degree_2_button");
+
+        // Get the modal
+        var sunburn_modal = document.getElementById("sunburn_modal");
+        var degree_1_modal = document.getElementById("degree_1_modal");
+        var degree_2_modal = document.getElementById("degree_2_modal");
+
+
+        // When the user clicks the button, open the modal
+        sunburn_button.onclick = function () {
+            sunburn_modal.style.display = "block";
+        }
+        degree_1_button.onclick = function () {
+            degree_1_modal.style.display = "block";
+        }
+        degree_2_button.onclick = function () {
+            degree_2_modal.style.display = "block";
+        }
+
+
+        var close_sunburn = document.getElementById("close_sunburn");
+        var close_degree_1 = document.getElementById("close_degree_1");
+        var close_degree_2 = document.getElementById("close_degree_2");
+
+        close_sunburn.onclick = function () {
+            sunburn_modal.style.display = "none";
+        }
+        close_degree_1.onclick = function () {
+            degree_1_modal.style.display = "none";
+        }
+        close_degree_2.onclick = function () {
+            degree_2_modal.style.display = "none";
+        }
+
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == sunburn_modal) {
+                sunburn_modal.style.display = "none";
+            }
+            if (event.target == degree_1_modal) {
+                degree_1_modal.style.display = "none";
+            }
+            if (event.target == degree_2_modal) {
+                degree_2_modal.style.display = "none";
+            }
+
+        }
+
+        // Carosel
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) { showDivs(slideIndex += n); }
+
+        function currentDiv(n) { showDivs(slideIndex = n); }
+
+        function showDivs(n) {
+            var i;
+            var pagenum = [];
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-red", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            pagenum.push(`<p style="text-align:center">Pages: ${slideIndex}/${x.length}</p>`);
+            page_num.innerHTML = pagenum.join('');
+            dots[slideIndex - 1].className += " w3-red";
+        }
+
+    </script>
+</body>
+
+</html>
+

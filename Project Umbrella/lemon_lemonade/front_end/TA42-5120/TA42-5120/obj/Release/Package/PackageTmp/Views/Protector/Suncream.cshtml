@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sunscreen</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <style>
+        .mySlides {
+            display: none;
+        }
+
+        .carosel_button {
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+            .carosel_button:hover {
+                background-color: yellow;
+                color: black;
+            }
+        /* Labels for checked inputs */
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        input:checked + span {
+            color: darkorange;
+        }
+
+        input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px yellow;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            border-radius: 15px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
+    <!--custome background Image-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+</head>
+
+<body style="margin-top: 80px !important">
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('../../assets/img/sunt.jpg')">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-10 col-xl-10">
+                    <div class="page-heading">
+                        <h1>Sunscreen</h1>
+                        <span class="subheading">Protect your children's skin at an early stage</span>
+                        <br />
+                        <span class="subheading"> AND </span>
+                        <br />
+                        <span class="subheading">Choose the correct sunscreen to protect us and our children</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Page Header-->
+    <!-- Section: Design block -->
+    <section>
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-lg-9">
+                    <div class="card">
+                        <div class="card-body p-5 ">
+                            <div class="w3-content w3-display-container">
+                                <div class='mySlides'>
+                                    <h3 id="why">Why sunscreen?</h3>
+                                    <p>
+                                        Sunscreen is a photoprotective topical product for the skin that absorbs or reflects some of the sun's ultraviolet (UV) radiation and thus helps protect against sunburn and most importantly prevent skin cancer.
+                                        <br><br>
+                                        To get the best protection from your sunscreen, apply it liberally and frequently. In addition, you also need to slip on a shirt, slap on a hat, seek out shade and slide on some sunnies.
+                                    </p>
+                                </div>
+                                <div class='mySlides'>
+                                    <h3 class="section-heading" id="types">Types of Sunscreen</h3>
+                                    <p>There are a variety of sunscreens that can be applied on, depending on the UV level of a given day, we should choose the correct sunscreen based on its SPF number to protect us and our children.</p>
+
+                                    <button class="carosel_button" id="spf_button">What is SPF?</button>
+                                    <button class="carosel_button" id="spf_ins_button">Choose the right SPF</button>
+
+                                    <div id="spf_modal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" id="close_spf">&times;</span>
+                                            <p>
+                                                <b>What is SPF:</b>
+                                                <br />
+                                                SPF is a measure of the amount of protection sunscreen can give against UVB radiation.
+                                                <br />
+                                                It tells you how much time a person can be exposed to the sun before getting burned compared to when not using sunscreen.
+                                                <br />
+                                                E.g. Applying SPF50 means it takes 50 times longer to get sunburned compared to when no sunscreen applied.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div id="spf_ins_modal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" id="close_ins_spf">&times;</span>
+                                            <label>
+                                                <b>Sunscreen with different SPF can block different percentage of UV</b>
+                                                <br><br />
+                                                <div class="col-lg-7">
+                                                    <table class="table">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td scope="row">SPF 4</td>
+                                                                <td>75%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td scope="row">SPF 8</td>
+                                                                <td>87.5%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td scope="row">SPF 15</td>
+                                                                <td>93.3%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td scope="row">SPF 30</td>
+                                                                <td>96.7%</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td scope="row">SPF 50</td>
+                                                                <td>98%</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <p>
+                                        <strong>Broad-spectrum</strong>
+                                        <br />UV radiation comes in two forms, UVA and UVB rays. Tannin and premature ageing are caused by UVA radiation, but sunburn and skin cancer are caused by UVB rays. A broad-spectrum sunscreen can shield you and your children from both types of dangerous radiation.
+                                    </p>
+
+                                    <p>
+                                        <strong>Water-resistant sunscreen</strong>
+                                        <br />When your children are having outdoor activities involving swimming or perspiring heavily, water-resistant sunscreens should be applied to their skin. As water-resistant sunscreens have been proven to be effective at protecting our skin in water for up to 40 minutes of swimming.
+                                    </p>
+
+                                    <img src="~/assets/img/suntext.jpg" class="img-fluid shadow-5 rounded-5 mb-4" />
+                                </div>
+
+                                <div class='mySlides'>
+                                    <h3 id="tips">Tips for Parents</h3>
+                                    <p id="pdf1"><input type="checkbox">&nbsp;<span> Choose a sunscreen that your child feels comfortable with and is easy to apply.</span></p>
+                                    <p id="pdf2"><input type="checkbox">&nbsp;<span> Try spray: Sprays are easy to apply on children. Spray a generous and even coating on skin. Don't spray near the face or mouth to avoid inhalation of the product. Also, remember to check the direction of the wind before spraying on your children.</span></p>
+                                    <p id="pdf3"><input type="checkbox">&nbsp;<span> Apply early and reapply: Sunscreen needs to be applied beforehand, about 20 minutes before your children go outside and reapply consistently. Also remember to reapply after swimming or excessive sweating. </span></p>
+                                    <p id="pdf4"><input type="checkbox">&nbsp;<span> Let your children practise applying sunscreen by themselves so that they can adopt the skills and habits at an early stage and reapply the sunscreen during the activities.</span></p>
+                                    <p id="pdf5"><input type="checkbox">&nbsp;<span> Keep the sunscreen in a cool place on your children’s belongings so It will be cold when applying – especially refreshing on a hot, summer’s day. </span></p>
+                                    <p id="pdf6"><input type="checkbox">&nbsp;<span> Try a clip-on sunscreen that can hang from your child’s bag and act as a visual reminder. </span></p>
+                                    <p id="pdf7"><input type="checkbox">&nbsp;<span> Demonstrate it to your children – children learn best from their parents. Apply sunscreen together with your children so that they can watch how you do it and follow your example. </span></p>
+                                    <button class="carosel_button" onclick="genPDF()">Generate PDF</button>
+
+                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+                                    <script>
+                                        function genPDF() {
+                                            var doc = new jsPDF('p', 'in', 'letter')
+
+                                            //Suncream Recommendation.pdf
+                                            var title = $("#tips").text();
+                                            var text1 = "1. " + $("#pdf1").text();
+                                            var text2 = "2. " + $("#pdf2").text();
+                                            var text3 = "3. " + $("#pdf3").text();
+                                            var text4 = "4. " + $("#pdf4").text();
+                                            var text5 = "5. " + $("#pdf5").text();
+                                            var text6 = "6. " + $("#pdf6").text();
+                                            var text7 = "7. " + $("#pdf7").text();
+                                            var lines1 = doc.splitTextToSize(text1, 7.5);
+                                            var lines2 = doc.splitTextToSize(text2, 7.5);
+                                            var lines3 = doc.splitTextToSize(text3, 7.5);
+                                            var lines4 = doc.splitTextToSize(text4, 7.5);
+                                            var lines5 = doc.splitTextToSize(text5, 7.5);
+                                            var lines6 = doc.splitTextToSize(text6, 7.5);
+                                            var lines7 = doc.splitTextToSize(text7, 7.5);
+
+                                            doc.text(0.5, 0.5, title);
+                                            doc.text(0.5, 1.5, lines1);
+                                            doc.text(0.5, 2.5, lines2);
+                                            doc.text(0.5, 4, lines3);
+                                            doc.text(0.5, 5, lines4);
+                                            doc.text(0.5, 6, lines5);
+                                            doc.text(0.5, 7, lines6);
+                                            doc.text(0.5, 8, lines7);
+                                            doc.save('Suncream Recommendation.pdf');
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="page_num"></div>
+                    <span class="caption text-muted">
+                        <button class="carosel_button" onclick="plusDivs(-1)">❮</button>
+                        <button class="carosel_button" onclick="plusDivs(1)">❯</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get the modal
+        var spf_modal = document.getElementById("spf_modal");
+        var spf_ins_modal = document.getElementById("spf_ins_modal");
+
+        var spf_button = document.getElementById("spf_button");
+        var spf_ins_button = document.getElementById("spf_ins_button");
+
+        // When the user clicks the button, open the modal
+        spf_button.onclick = function () {
+            spf_modal.style.display = "block";
+        }
+        spf_ins_button.onclick = function () {
+            spf_ins_modal.style.display = "block";
+        }
+
+        var close_spf = document.getElementById("close_spf");
+        var close_ins_spf = document.getElementById("close_ins_spf");
+
+        close_spf.onclick = function () {
+            spf_modal.style.display = "none";
+        }
+        close_ins_spf.onclick = function () {
+            spf_ins_modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == spf_modal) {
+                spf_modal.style.display = "none";
+            }
+            if (event.target == spf_ins_modal) {
+                spf_ins_modal.style.display = "none";
+            }
+        }
+
+        // Carosel
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) { showDivs(slideIndex += n); }
+
+        function currentDiv(n) { showDivs(slideIndex = n); }
+
+        function showDivs(n) {
+            var i;
+            var pagenum = [];
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-red", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            pagenum.push(`<p style="text-align:center">Pages: ${slideIndex}/${x.length}</p>`);
+            page_num.innerHTML = pagenum.join('');
+            dots[slideIndex - 1].className += " w3-red";
+        }
+    </script>
+</body>
+</html>
+

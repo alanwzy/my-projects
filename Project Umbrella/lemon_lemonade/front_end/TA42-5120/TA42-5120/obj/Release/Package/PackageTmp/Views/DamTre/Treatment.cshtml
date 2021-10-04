@@ -1,0 +1,549 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>First-aid Treatment</title>
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!--jspdf imported library-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+
+    <style>
+        .menu {
+            border-left: 6px solid #2196F3;
+            padding-left: 15px;
+        }
+
+        .leftB {
+            border-left: 6px solid #f0f321;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centerP {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-item.active {
+            height: 50vh;
+        }
+
+        .skinPic {
+            border: 1px solid rgb(19, 20, 4);
+            padding: 5px;
+        }
+
+        .cite {
+            text-align: right;
+            font-size: 15px;
+            color: gray;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .carosel_button {
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #FFA500;
+            color: white;
+            padding: 12px 8px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+        .carosel_button:hover {
+            background-color: yellow;
+            color: black;
+        }
+        /* Labels for checked inputs */
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        input:checked + span {
+            color: darkorange;
+        }
+
+        input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px yellow;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            border-radius: 15px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+        td, th {
+            text-align: center
+        }
+
+        .form-control {
+            height: 55px;
+            display: inline-block;
+            background: #fff;
+            color: black;
+            font-size: 18px;
+            border-radius: 0px;
+            -webkit-box-shadow: none;
+            box-shadow: none
+        }
+
+        .domain-form .form-group {
+            color: #fff;
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            -ms-border-radius: 0;
+            border-radius: 0
+        }
+
+        .menu {
+            border-left: 6px solid #2196F3;
+            padding-left: 15px;
+        }
+
+        .leftB {
+            border-left: 6px solid #f0f321;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+
+        /* Carousel styling */
+        .headBG {
+            background-image: url('../../assets/img/treatHead.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centerP {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-item.active {
+            height: 50vh;
+        }
+
+        .skinPic {
+            border: 1px solid rgb(19, 20, 4);
+            padding: 5px;
+        }
+
+        .cite {
+            text-align: right;
+            font-size: 15px;
+            color: gray;
+        }
+
+        .undli {
+            text-decoration: underline;
+            color: rgb(182, 22, 22);
+        }
+    </style>
+</head>
+
+<body style="margin-top: 80px !important">
+    <div class="container-fluid">
+        <div class="row" id="top">
+            <div class="headBG shadow-2-strong carousel-item active">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="text-white text-center center">
+                            <h4 style="color: #ffc107">
+                                Do you know <br><span style="font-size: 50px;"> how to treat the sunburn?</span>
+                               
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section: Design block -->
+    <section>
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <div class="card mb-3">
+                        <div class="card-body p-5 ">
+                            <div class="w3-content w3-display-container">
+                                <div class='mySlides'>
+                                    <h3 id="pdf10">First-aid Treatment</h3>
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-7 ">
+                                                <div class="leftB">
+                                                    <p id="pdf11"><input type="checkbox">&nbsp;<span>Take pain reliever tablets (would be better as gels)</span></p>
+                                                    <p id="pdf12"><input type="checkbox">&nbsp;<span>Cool the skin with a tower damped in tap water several times per day.</span></p>
+                                                    <p id="pdf13"><input type="checkbox">&nbsp;<span>Apply moisturizer or lotion to smooth the affected area.</span></p>
+                                                    <p id="pdf14"><input type="checkbox">&nbsp;<span>Drink more water to prevent dehydration.</span></p>
+                                                    <p id="pdf15"><input type="checkbox">&nbsp;<span>Do not try to break the blisters. If it does then apply antibiotic ointment and cover it up with a bandage.</span></p>
+                                                    <p id="pdf16"><input type="checkbox">&nbsp;<span>Gently treat the affected area.</span></p>
+                                                    <p id="pdf17"><input type="checkbox">&nbsp;<span>Protect your skin from any further exposure to sunlight.</span></p>
+                                                </div>
+                                                <button class="carosel_button" onclick="genPDF1()">Generate PDF</button>
+
+                                                <script>
+                                                    function genPDF1() {
+                                                        var doc = new jsPDF('p', 'in', 'letter')
+
+                                                        //first-aid treatment.pdf
+                                                        var title1 = document.getElementById("pdf10").innerHTML;
+                                                        var text11 = "1. " + $("#pdf11").text();
+                                                        var text12 = "2. " + $("#pdf12").text();
+                                                        var text13 = "3. " + $("#pdf13").text();
+                                                        var text14 = "4. " + $("#pdf14").text();
+                                                        var text15 = "5. " + $("#pdf15").text();
+                                                        var lines = doc.splitTextToSize(text15, 7.5);
+                                                        var text16 = "6. " + $("#pdf16").text();
+                                                        var text17 = "7. " + $("#pdf17").text();
+
+                                                        doc.text(0.5, 0.5, title1);
+                                                        doc.text(0.5, 1.5, text11);
+                                                        doc.text(0.5, 2.5, text12);
+                                                        doc.text(0.5, 3.5, text13);
+                                                        doc.text(0.5, 4.5, text14);
+                                                        doc.text(0.5, 5.5, lines);
+                                                        doc.text(0.5, 6.5, text16);
+                                                        doc.text(0.5, 7.5, text17);
+
+                                                        doc.save('First-Aid Treatment.pdf');
+                                                    }
+                                                </script>
+                                                <br>
+                                            </div>
+                                            <div class="col-md-5">
+                                                <img src="~/assets/img/treatment.png" alt="First-aid Treatement to sunburn" class="skinPic centerP" style="width: 100%;"><br>
+                                                <p class="cite" style="text-align: left;">
+                                                    Retrieve from:
+                                                    <a href="https://www.just4kidsurgentcare.com/sunburn/" target="_blank"> Just 4 kid surgent care: How To Treat A Sunburn </a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <h3 id="pdf20"> You should see the doctor when</h3>
+                                    <div class="leftB">
+                                        <p id="pdf21"><input type="checkbox">&nbsp;<span>The blister covers a <b>large area</b> of your body.</span></p>
+                                        <p id="pdf22"><input type="checkbox">&nbsp;<span>The <b>swelling gets severe</b> and <b>does not improve</b> after a few days.</span></p>
+                                        <p id="pdf23"><input type="checkbox">&nbsp;<span>The affected areas show signs of <b>infection</b>, such as Severe Pain or Red Fluid coming from the blisters.</span></p>
+                                    </div>
+                                    <button class="carosel_button" onclick="genPDF2()">Generate PDF</button>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <script>
+                                        function genPDF2() {
+                                            var doc = new jsPDF('p', 'in', 'letter')
+
+                                            //Time to See Doctors.pdf
+                                            var title2 = $("#pdf20").text();
+                                            var text21 = "1. " + $("#pdf21").text();
+                                            var text22 = "2. " + $("#pdf22").text();
+                                            var text23 = "3. " + $("#pdf23").text();
+                                            var lines = doc.splitTextToSize(text23, 7.5);
+
+                                            doc.text(0.5, 0.5, title2);
+                                            doc.text(0.5, 1.5, text21);
+                                            doc.text(0.5, 2.5, text22);
+                                            doc.text(0.5, 3.5, lines);
+
+                                            doc.save('Time to See Doctors.pdf');
+                                        }
+                                    </script>
+
+                                    <h3 id="pdf30">Seek emergency medical care <span style="color:red;">IMMEDIATELY</span> if you have</h3>
+                                    <div class="leftB">
+                                        <p id="pdf31"><input type="checkbox">&nbsp;<span>Fever</span></p>
+                                        <p id="pdf32"><input type="checkbox">&nbsp;<span>Faints</span></p>
+                                        <p id="pdf33"><input type="checkbox">&nbsp;<span>Dehydration</span></p>
+                                    </div>
+                                    <button class="carosel_button" onclick="genPDF3()">Generate PDF</button>
+
+                                    <script>
+                                        function genPDF3() {
+                                            var doc = new jsPDF('p', 'in', 'letter')
+
+                                            //Symptoms that Needs Medicial.pdf
+                                            var title3 = $("#pdf30").text();
+                                            var text31 = "1. " + $("#pdf31").text();
+                                            var text32 = "2. " + $("#pdf32").text();
+                                            var text33 = "3. " + $("#pdf33").text();
+
+                                            doc.text(0.5, 0.5, title3);
+                                            doc.text(0.5, 1.5, text31);
+                                            doc.text(0.5, 2.5, text32);
+                                            doc.text(0.5, 3.5, text33);
+
+                                            doc.save('Symptoms that Needs Medicial.pdf');
+                                        }
+                                    </script>
+                                </div>
+
+                                <div class='mySlides'>
+                                    <h3 id="hospital">Search for Nearby Hospitals when in emergency</h3>
+                                    <form action="javascript:get_hospitals()" class="domain-form">
+                                        <div class="form-group d-md-flex">
+                                            <input id="postcode" type="text" class="form-control" placeholder="Enter your postcode">
+                                            <input type="submit" style="height:55px; width:100px" class="carosel_button" value="Search">
+                                        </div>
+                                    </form>
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <div id="dvMap" style="width:500px; height:333px;"></div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            Click the hosptial icon and gain more information about it.
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <div id="hospital_container"></div>
+
+                                    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+                                    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9ZNK_OYXVjg6Fq1JMdWGqRs1_rXG8_Lg"></script>
+                                    <script>
+                                        const hospital_container = document.getElementById('hospital_container');
+
+                                        function get_hospitals() {
+                                            // This is the postcode entered by user
+                                            const postcode = document.getElementById('postcode').value;
+
+                                            // Get the hospitals from the Back-End API and put them here
+                                            // headers: allow cross domain visit
+                                            $.ajax({
+                                                type: "GET",
+                                                dataType: "text",
+                                                url: "https://lemonumbrella.azurewebsites.net/nearby_hospitals_i2?postcode=" + postcode,
+                                                headers: {
+                                                    'Access-Control-Allow-Origin': '*',
+                                                },
+                                                success: function (data) {
+                                                    console.log("Success");
+                                                    if (!(postcode >= 3000 && postcode <= 3999)) {
+                                                        alert("Please enter valid postcode in VIC from 3000 to 3999.");
+                                                    }
+                                                    else {
+                                                        const hospitals = JSON.parse(data.replaceAll(`'`, `"`));
+                                                        console.log(hospitals);
+
+                                                        // variable to store the HTML output
+                                                        var output = [];
+                                                        //push content and table header
+                                                        output.push(`
+                                                        <h4 style="text-align:center">Hospital in postcode ${postcode}</h4>
+                                                        <table class="table table-striped">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th scope="col">Name</th>
+                                                                    <th scope="col">Sector</th>
+                                                                    <th scope="col">Phone</th>
+                                                                    <th scope="col">Address</th>
+                                                                    <th scope="col">Suburb</th>
+                                                                    <th scope="col">Postcode</th>
+                                                                    <th scope="col">State</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                    `                               );
+                                                        // for each hospital...
+                                                        hospitals.forEach(current_hospital => {
+                                                            // add this question and its selections to the output
+                                                            output.push(`
+                                                            <tr>
+                                                                <td scope="col">${current_hospital.name}</td>
+                                                                <td scope="col">${current_hospital.sector}</td>
+                                                                <td scope="col">${current_hospital.phone}</td>
+                                                                <td scope="col">${current_hospital.address}</td>
+                                                                <td scope="col">${current_hospital.suburb}</td>
+                                                                <td scope="col">${current_hospital.postcode}</td>
+                                                                <td scope="col">${current_hospital.state}</td>
+                                                            </tr>
+                                                        `);
+                                                        });
+                                                        //push end tag
+                                                        output.push(`</tbody></table>`);
+
+                                                        hospital_container.innerHTML = output.join('');
+
+                                                        // <map>
+                                                        var mapOptions = {
+                                                            center: new google.maps.LatLng(hospitals[0].lat, hospitals[0].lng),
+                                                            zoom: 12,
+                                                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                                                        };
+                                                        var infoWindow = new google.maps.InfoWindow();
+                                                        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+
+                                                        for (i = 0; i < hospitals.length; i++) {
+                                                            var data = hospitals[i];
+                                                            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+                                                            var image = {
+                                                                url: '/assets/icons8-hospital-64.png',
+                                                                scaledSize: new google.maps.Size(50, 50)
+                                                            };
+                                                            var marker = new google.maps.Marker({
+                                                                position: myLatlng,
+                                                                map: map,
+                                                                icon: image
+                                                            });
+                                                            (function (marker, data) {
+                                                                google.maps.event.addListener(marker, "click", function (e) {
+                                                                    infoWindow.setContent("<h5>" + data.name + "</h5>" + "Address: "
+                                                                        + data.address + "<br>Phone: "
+                                                                        + data.phone + "<br>Suburb: " + data.suburb + "<br>Postcode: " + data.postcode + "<br>State: "
+                                                                        + data.state + "<br>Sector: " + data.sector);
+                                                                    infoWindow.open(map, marker);
+                                                                });
+                                                            })(marker, data);
+                                                        }
+                                                        // </map>
+                                                    }
+
+                                                    }
+                                                  
+                                            });
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page_num"></div>
+                    <span class="caption text-muted">
+                        <button class="carosel_button" onclick="plusDivs(-1)">❮</button>
+                        <button class="carosel_button" onclick="plusDivs(1)">❯</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    // Carosel
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) { showDivs(slideIndex += n); }
+
+    function currentDiv(n) {
+    showDivs(slideIndex = n);
+
+    }
+
+    function showDivs(n) {
+    var i;
+    var pagenum = [];
+    var x = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    if (n > x.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = x.length }
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-red", "");
+    }
+    x[slideIndex - 1].style.display = "block";
+    pagenum.push(`<p style="text-align:center">Pages: ${slideIndex}/${x.length}</p>`);
+    page_num.innerHTML = pagenum.join('');
+    // dots[slideIndex-1].className += " w3-red";
+    }
+
+    </script>
+</body>
+
+</html>
+

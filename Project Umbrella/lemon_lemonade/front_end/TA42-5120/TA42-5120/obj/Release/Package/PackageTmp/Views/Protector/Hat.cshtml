@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hat</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .mySlides {
+            display: none;
+        }
+
+        .carosel_button {
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            .carosel_button:hover {
+                background-color: yellow;
+                color: black;
+            }
+        /* Labels for checked inputs */
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        input:checked + span {
+            color: darkorange;
+        }
+
+        input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px yellow;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            border-radius: 15px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
+
+
+</head>
+<body style="margin-top: 80px !important">
+    <!-- Navigation-->
+    <!-- Page Header-->
+    <!-- Page Header-->
+    <header class="masthead" style="background-image: url('../../assets/img/hat1.jpg');">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-10 col-xl-10">
+                    <div class="page-heading">
+                        <h1>Hats</h1>
+                        <br />
+                        <span class="subheading">Hats provide instant shade.</span>
+                        <br />
+                        <span class="subheading">You can increase your overall sun protection by more than 10% when wearing hats. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Post Content-->
+    <!--New things to intergrate-->
+    <section>
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-lg-9">
+                    <!-- Section: Design block -->
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <div class='mySlides'>
+                                    <h3 class="section-heading" id="why">Why Hats?</h3>
+                                    <p>Hats can filter both UVA and UVB rays. The right hats can reduce the amount of UV radiation reaching your eyes by 50%.</p>
+                                </div>
+                                <div class='mySlides'>
+                                    <h3 class="section-heading" id="types">Different Types of Hats</h3>
+                                    <p><b>Broad-brimmed hat:</b> Brims should be at least 7.5cm for an adult and 6cm for children. For children under the age of 10 years, the brim should be proportional to the size of the child’s head and provide shade for the whole face.</p>
+                                    <p><b>Bucket hat:</b> Bucket or surfer-style hats should have a deep crown and sit low on the head. The angled brim should be at least 6cm for adults and 5cm for children, and should shade the face, ears and back of the neck.</p>
+                                    <p><b>Legionnaire-style hat:</b> Legionnaire-style hats should have a flap that covers the neck. The side flap and front peak (brim) should meet to protect the sides of the face.</p>
+                                    <button class="carosel_button" id="hat_button">More about Hats</button>
+                                    <div id="hat_modal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" id="close_hat">&times;</span>
+                                            <p>The following table shows the Protection Factors (PF) of different types of hats to different areas of the body. If a person wears a hat with a PF of 2 or 3, they would need to be outside for two to three times as long to get sunburned.</p>
+                                            <span class="caption text-muted"><img class="img-fluid" src="~/assets/img/hats2.png" /></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='mySlides'>
+                                    <h3 class="section-heading" id="tips">Tips for Parents</h3>
+                                    <p><input type="checkbox">&nbsp;<span> Many children do not like to wear hats. Persistence is needed to teach them that a sun protective hat is part of their outside routine. </span></p>
+                                    <p><input type="checkbox">&nbsp;<span> Make sure your children understand that: <i>If a hat is on, the outdoor fun is on!</i></span></p>
+                                    <p><input type="checkbox">&nbsp;<span> Children are more likely to wear their hat if you do too.</span></p>
+                                    <p><input type="checkbox">&nbsp;<span> For babies, choose a fabric that will crumple easily when they put their head down.</span></p>
+                                    <p><input type="checkbox">&nbsp;<span> For younger children choose a hat size that is proportional to the size of their head and provides shade across their face and neck areas.</span></p>
+                                    <p><input type="checkbox">&nbsp;<span> For older children, a bucket hat should have a deep crown and angled brim which is at least 6cm. A wide brimmed hat should have a brim that is at least 7.5cm. The side flap and front peak of a legionnaire hat should meet to protect the side of the face.</span></p>
+                                    <p><input type="checkbox">&nbsp;<span> Hats that can be adjusted at the crown are best. If the hat is secured with a long strap and toggle, ensure it has a safety snap, place the strap at the back of the head or trim the length so it doesn’t become a choking hazard.</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page_num"></div>
+                    <span class="caption text-muted">
+                        <button class="carosel_button" onclick="plusDivs(-1)">❮</button>
+                        <button class="carosel_button" onclick="plusDivs(1)">❯</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+
+    <script>
+        // Get the modal
+        var hat_modal = document.getElementById("hat_modal");
+        var hat_button = document.getElementById("hat_button");
+
+        // When the user clicks the button, open the modal
+        hat_button.onclick = function () {
+            hat_modal.style.display = "block";
+        }
+
+        var close_hat = document.getElementById("close_hat");
+
+        close_hat.onclick = function () {
+            hat_modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == hat_modal) {
+                hat_modal.style.display = "none";
+            }
+        }
+
+        // Carosel
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) { showDivs(slideIndex += n); }
+
+        function currentDiv(n) { showDivs(slideIndex = n); }
+
+        function showDivs(n) {
+            var i;
+            var pagenum = [];
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-red", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            pagenum.push(`<p style="text-align:center">Pages: ${slideIndex}/${x.length}</p>`);
+            page_num.innerHTML = pagenum.join('');
+            dots[slideIndex - 1].className += " w3-red";
+        }
+    </script>
+</body>
+</html>
+

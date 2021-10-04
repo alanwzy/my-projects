@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Eye Damage</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+        .leftB {
+            border-left: 6px solid #f0f321;
+            padding-left: 30px;
+            margin-left: 30px;
+        }
+
+        .ita {
+            font-style: italic;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .carosel_button {
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .carosel_button:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+        /* Labels for checked inputs */
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        input:checked + span {
+            color: darkorange;
+        }
+
+        input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px yellow;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            border-radius: 15px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        td, th {
+            text-align: center
+        }
+
+        .menu {
+            border-left: 6px solid #2196F3;
+            padding-left: 15px;
+        }
+
+        .leftB {
+            border-left: 6px solid #f0f321;
+            padding-left: 30px;
+            margin-left: 20px;
+        }
+
+        .ita {
+            font-style: italic;
+        }
+
+        /* Carousel styling */
+
+        .headBG {
+            background-image: url("../../assets/img/eyes.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 300px;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .carousel-item.active {
+            height: 50vh;
+        }
+
+        .eyes1 {
+            padding: 4px;
+            width: 80%;
+        }
+
+            .eyes1:hover {
+                opacity: 0.3;
+            }
+
+    </style>
+
+</head>
+
+<body style="margin-top: 80px !important">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="headBG shadow-2-strong carousel-item active">
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div class="text-white text-center center">
+                            <h2 style="color: #ffc107">Beware of the intense sunlight.</h2>
+                            <br>
+                            <h4 style="color: #ffc107">Your eyes might not be as strong as you think. </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="row d-flex justify-content-center mt-5">
+                <div class="col-lg-9">
+                    <div class="card mb-2">
+                        <div class="card-body p-5 ">
+                            <div class="w3-content w3-display-container">
+                                <div class='mySlides'>
+                                    <h3 id="why"><strong>Why is UV Radiation (UVR) dangerous?</strong></h3>
+                                    <div class="leftB">
+                                        <p>UVR can cause harmful effects to your skin, eyes, and immune system.</p>
+                                        <p> Skin cancers around the eyes, especially on the eyelids, are common in Australia due to our high exposure to UV.</p>
+                                        <p>If you notice any spots, moles, or other lesions around the eyes then you need to see the doctor or dermatologist as soon as possible.</p>
+                                    </div>
+                                    <br />
+                                    <h4>Short-term Consequences</h4>
+                                    <div class="leftB">
+                                        <p>UVR can cause <b>Photokeratitis</b> (also known as Snow Blindness) as the eyes get sunburned. This is a painful condition when swelling and inflammation occur on the clear layer at the front of the eyes (the cornea) could cause temporary loss of vision.</p>
+                                        <button class="carosel_button" id="photokeratitis_button">Common symptoms of Photokeratitis</button><br />
+                                    </div>
+
+                                    <div id="photokeratitis_modal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" id="close_photokeratitis">&times;</span>
+                                            <p>
+                                                <b>Common symptoms of Photokeratitis</b>
+                                            <p class="leftB">
+                                                Red and Blurred eyes <br>
+                                                Tearing/Watery eyes<br>
+                                                Eyes being sensitive to light<br>
+                                                Pain around the eyesv
+                                            </p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <h4>Long-term Consequences</h4>
+                                    <div class="leftB">
+                                        <p>In a long term, UVR can cause <b>Pterygium</b> or <b>Macular Degeneration</b>.</p>
+                                        <p><b>Pterygium</b> (also known as Surfer’s Eye) is the condition when a membrane grows on the clear layer at the front of the eyes (the cornea). As this membrane grows, it could lead to permanent vision loss or distortion. <br></p>
+                                        <button class="carosel_button" id="pterygium_button">Common symptoms of Pterygium</button>
+                                        <p><b>Macular Degeneration</b> is when the area near the center of the eyes (the one that provides the clearest vision) gets damaged. This condition causes the loss of central vision, which results in blurred vision and could eventually cause blank spaces in vision. Macular Degeneration is common for people from 50 or above. There is currently no cure for this condition as treatment could only slow down its progression. </p>
+                                        <button class="carosel_button" id="macular_button">Common symptoms of Macular Degeneration</button>
+                                    </div>
+                                    <div id="pterygium_modal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" id="close_pterygium">&times;</span>
+                                            <p>
+                                                <b>Common symptoms of Pterygium</b>
+                                            <p class="leftB">
+                                                Pink or flesh color on the eye corner near the nose. <br>
+                                                Usually painless
+                                            </p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id="macular_modal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" id="close_macular">&times;</span>
+                                            <p>
+                                                <b>Common symptoms of Macular Degeneration</b>
+                                            <p class="leftB">
+                                                Straight-line seems bent<br>
+                                                Decrease intensity or brightness of colors<br>
+                                                Blurry spot(s) on vision<br>
+                                                Blurriness on print words
+                                            </p>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='mySlides '>
+                                    <h3 id="Beware"><strong>Beware of your surroundings</strong></h3>
+                                    <div class="leftB">
+                                        <p>Even when we are in the shade and cannot sense UVR, it might still exist around us and hurt our eyes.</p>
+                                        <p>Remember to bring sunglasses for yourself and also your children when you go skiing as the snow could reflect back <b>94%</b> of the UVR to your eyes.</p>
+                                        <p>You should also make sure that your children wear sunglasses when they go to the beach during the summer as the seafoam and sand can reflect up to 25% and 12% of the UVR respectively.</p>
+                                        <button class="carosel_button" id="surface_button">Sunlight reflection from different types of surface</button><br />
+                                    </div>
+
+                                    <div id="surface_modal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" id="close_surface">&times;</span>
+
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"><b>Surface</b></th>
+                                                        <th scope="col"><b>Percentage of UVR Reflection</b></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row">Snow</td>
+                                                        <td>94%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">See Foam</td>
+                                                        <td>25%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Sand</td>
+                                                        <td>12%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Concrete</td>
+                                                        <td>11%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Water</td>
+                                                        <td>4%</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td scope="row">Grass</td>
+                                                        <td>2%</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="text-center">
+                                                Retrieve from:
+                                                <a href="https://www.learnskin.com/articles/do-sun-umbrellas-provide-enough-uv-protection" target="_blank">https://www.learnskin.com/articles/do-sun-umbrellas-provide-enough-uv-protection </a>
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class='mySlides'>
+                                    <h3 id="tips">Tips for Parents</h3>
+                                    <div class="col-md-12 gx-5 mb-4 justify-content-center align-items-center">
+                                        <div class="card mb-3 leftB">
+                                            <div class="card-body p-2">
+                                                <p><input type="checkbox">&nbsp;<span>Children are particularly at risk as UVR can penetrate deeper into the eyes and cause increased damages.</span></p>
+                                                <p><input type="checkbox">&nbsp;<span>Sunglasses can reduce or even eliminate the amount of UVR exposed to the eyes.</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="caption text-muted">
+                        <button class="carosel_button" onclick="plusDivs(-1)">❮</button>
+                        <button class="carosel_button" onclick="plusDivs(1)">❯</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get the modal
+        var photokeratitis_modal = document.getElementById("photokeratitis_modal");
+        var pterygium_modal = document.getElementById("pterygium_modal");
+        var macular_modal = document.getElementById("macular_modal");
+        var surface_modal = document.getElementById("surface_modal");
+
+        var photokeratitis_button = document.getElementById("photokeratitis_button");
+        var pterygium_button = document.getElementById("pterygium_button");
+        var macular_button = document.getElementById("macular_button");
+        var surface_button = document.getElementById("surface_button");
+
+        // When the user clicks the button, open the modal
+        photokeratitis_button.onclick = function () {
+            photokeratitis_modal.style.display = "block";
+        }
+        pterygium_button.onclick = function () {
+            pterygium_modal.style.display = "block";
+        }
+        macular_button.onclick = function () {
+            macular_modal.style.display = "block";
+        }
+        surface_button.onclick = function () {
+            surface_modal.style.display = "block";
+        }
+
+
+        var close_photokeratitis = document.getElementById("close_photokeratitis");
+        var close_pterygium = document.getElementById("close_pterygium");
+        var close_macular = document.getElementById("close_macular");
+        var close_surface = document.getElementById("close_surface");
+
+        close_photokeratitis.onclick = function () {
+            photokeratitis_modal.style.display = "none";
+        }
+        close_pterygium.onclick = function () {
+            pterygium_modal.style.display = "none";
+        }
+        close_macular.onclick = function () {
+            macular_modal.style.display = "none";
+        }
+        close_surface.onclick = function () {
+            surface_modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == photokeratitis_modal) {
+                photokeratitis_modal.style.display = "none";
+            }
+            if (event.target == pterygium_modal) {
+                pterygium_modal.style.display = "none";
+            }
+            if (event.target == macular_modal) {
+                macular_modal.style.display = "none";
+            }
+            if (event.target == surface_modal) {
+                surface_modal.style.display = "none";
+            }
+        }
+
+        // Carosel
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) { showDivs(slideIndex += n); }
+
+        function currentDiv(n) { showDivs(slideIndex = n); }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-red", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " w3-red";
+        }
+
+    </script>
+</body>
+
+</html>
+

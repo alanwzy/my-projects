@@ -1,0 +1,296 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Clothes and Umbrella</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        .mySlides {
+            display: none;
+        }
+
+        .carosel_button {
+            border-radius: 15px;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+            .carosel_button:hover {
+                background-color: yellow;
+                color: black;
+            }
+        /* Labels for checked inputs */
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+        }
+
+        input:checked + span {
+            color: darkorange;
+        }
+
+        input[type="checkbox"]:checked {
+            box-shadow: 0 0 0 3px yellow;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            border-radius: 15px;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
+</head>
+
+<body style="margin-top: 80px !important">
+    <!-- Page Header-->
+    <header class="masthead" style=" background-image: url('../../assets/img/clothtitle.jpg');">
+        <div class="container position-relative px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-10 col-xl-10">
+                    <div class="page-heading">
+                        <h1>Clothes and Umbrella</h1>
+                        <span class="subheading">Protect your children's skin with sun protective clothing</span>
+                        <br />
+                        <span class="subheading"> AND </span>
+                        <br />
+                        <span class="subheading">Choose the correct cloth to protect us and our children</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Page Header-->
+
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-5">
+            <div class="col-lg-9">
+                <!-- Section: Design block -->
+                <section>
+                    <div class="card">
+                        <div class="card-body p-5">
+                            <div class="w3-content w3-display-container">
+                                <div class='mySlides'>
+                                    <h3 id="why">Why cloth and umbrella?</h3>
+                                    <p>One of the simplest ways to protect your skin is to choose clothing or use an umbrella which absorbs or blocks harmful UV radiation.</p>
+                                    <img src="~/assets/img/clothumbrella.jpg" class="img-fluid shadow-5 rounded-5 mb-4" width="600" height="400" />
+                                    <p>Clothing and an umbrella with UPF labelings are great barriers between the sun’s UV and your skin, but clothing can better protect your skin as it gets closer to skin.</p>
+                                    <button class="carosel_button" id="upf_button">What is UPF?</button>
+
+                                    <div id="upf_modal" class="modal">
+                                        <div class="modal-content">
+                                            <span class="close" id="close_upf">&times;</span>
+                                            <p>
+                                                <b>What is UPF?</b>
+                                                <br />
+                                                UPF is a measurement of the sun protection strength of clothing and fabrics used in outdoor shades.
+                                                <br />
+                                                It represents the ratio of UV radiation exposure with and without the protection of the measured textile.
+                                                <br />
+                                                The higher the UPF the stronger the protection against the sun.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='mySlides'>
+                                    <h3 id="materials">Choose the right materials to protect your children from UV</h3>
+                                    <br>
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Attribute</th>
+                                                <th scope="col">Note</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td scope="row">Coverage</td>
+                                                <td>Choose long sleeves, skirts and pants which can cover more skin so that you have better protection.</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Weave</td>
+                                                <td>The tighter the fabric structure, the less UV radiation passes through, the better the sun protection.</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Color</td>
+                                                <td>Dark colors absorb ultraviolet rays more strongly than the lighter shades on the same fabric, which increases sun protection.</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Weight</td>
+                                                <td>The heavier of the same fabric, the lesser UVR it can against.</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Stretch</td>
+                                                <td>The greater the stretch or tension put on a textile, the lower the UPF rating.</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Water</td>
+                                                <td>When some fabrics have absorbed water, they will provide less protection against UVR, such as polyester and cotton. Choosing a fabric that provides effective protection from UV but dries quickly will help minimise the effect of moisture.</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Washing</td>
+                                                <td>Cotton-based fabrics tend to shrink after the first washing, thereby tightening the weave and reducing the transmitted ultraviolet radiation. So old, threadbare or faded clothes may offer decreased protection over time.</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Additives</td>
+                                                <td>UVR stabilizers or additives can be added to a range of textiles to improve their sun protection.</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">Layering</td>
+                                                <td>Increasing UV protection by layering materials and clothes is a good idea.</td>
+                                            </tr>
+                                            <tr>
+                                                <td scope="row">UV absorbers</td>
+                                                <td>Some clothing has been modified to absorb more UV light.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p><b>Check the label on your clothes to check if they've been treated, and then follow the care instructions.</b></p>
+                                </div>
+                                <div class='mySlides'>
+                                    <h3 id="tips">Tips for parents</h3>
+                                    <p id="pdf1"><input type="checkbox">&nbsp;<span>Try to cover as much skin as possible with cool, loose-fitting clothing made from densely-woven fabric like cotton.</span></p>
+                                    <p id="pdf2"><input type="checkbox">&nbsp;<span>If your child is wearing a singlet top or a dress with thin straps, remember to layer them with a t-shirt or a shirt before going outside to play.</span></p>
+                                    <button class="carosel_button" onclick="genPDF()">Generate PDF</button>
+                                    <br>
+                                    <img src="~/assets/img/upfcloth.jpg" class="img-fluid shadow-5 rounded-5 mb-4" />
+
+                                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+                                    <script>
+                                        function genPDF() {
+                                            var doc = new jsPDF('p', 'in', 'letter')
+
+                                            //Hat Recommendation.pdf
+                                            var title = $("#tips").text();
+                                            var text1 = "1. " + $("#pdf1").text();
+                                            var text2 = "2. " + $("#pdf2").text();
+                                            var lines1 = doc.splitTextToSize(text1, 7.5);
+                                            var lines2 = doc.splitTextToSize(text2, 7.5);
+
+                                            doc.text(0.5, 0.5, title);
+                                            doc.text(0.5, 1.5, lines1);
+                                            doc.text(0.5, 2.5, lines2);
+                                            doc.save('Hat Recommendation.pdf');
+                                        }
+                                    </script>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="page_num"></div>
+                    <span class="caption text-muted">
+                        <button class="carosel_button" onclick="plusDivs(-1)">❮</button>
+                        <button class="carosel_button" onclick="plusDivs(1)">❯</button>
+                    </span>
+                </section>
+                <!-- Section: Design block -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var upf_modal = document.getElementById("upf_modal");
+        var upf_button = document.getElementById("upf_button");
+
+        // When the user clicks the button, open the modal
+        upf_button.onclick = function() {
+            upf_modal.style.display = "block";
+        }
+
+        var close_upf = document.getElementById("close_upf");
+        close_upf.onclick = function() {
+            upf_modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == upf_modal) {
+                upf_modal.style.display = "none";
+            }
+        }
+
+        // Carosel
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) { showDivs(slideIndex += n); }
+
+        function currentDiv(n) { showDivs(slideIndex = n); }
+
+        function showDivs(n) {
+            var i;
+            var pagenum = [];
+            var x = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" w3-red", "");
+            }
+            x[slideIndex - 1].style.display = "block";
+            pagenum.push(`<p style="text-align:center">Pages: ${slideIndex}/${x.length}</p>`);
+            page_num.innerHTML = pagenum.join('');
+            dots[slideIndex-1].className += " w3-red";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿Topic,Question,Answer,Explaination,Selection_1,Selection_2
+Eye_dmg,I should avoid to look directly at the sun.,TRUE,"While you might not feel any pain or sense any damage as you gaze at the sun, you eyes are exposed to more UV rays and the risk of damage to your eyes increases.",TRUE,false
+Skin_dmg,A suntan is a sign of good health.,FALSE,"A suntan is a sign that your skin is trying to protect itself against the sun's damaging
+rays. The tan will fade but the damage to your skin cells remains and adds up over the years.
+Too much sunlight can damage eyes leading to cataracts and can damage the skin, leading to
+sunburn, premature skin aging and skin cancer. ",TRUE,false
+Sunscreen,"If I'm wearing sunscreen, I can stay in the sun as long as I want.",FALSE,"Sunscreen does not provide 100% protection, it should not be used as a way to prolong your time in the sun. Even with proper sunscreen use, some UV rays still get through. Also, sunscreen will fade off of your skin by time. Remember to reapply sunscreen every two hours.",TRUE,false
+Sunglasses,I should wear sunglasses when I do outdoor acitivities because they look cool.,FALSE,"Sunglasses should be weared to help prevent the exposure to UV rays of our eyes. Prolonged exposure can lead to certain eye diseases. Choose the wrap-around style that
+covers as much of the eye
+area as possible.",TRUE,false
+Hat,Wearing a hat can protect me from exposure to UV rays under sunlight.,TRUE," Wear a hat is a great way to protect your hair, eyes, and skin from the sun's ultraviolet (UV) rays.",TRUE,false
+Cloth,Wearing a long-sleeve cloth can block out all UV rays from my skin.,FALSE,"UV rays can get through your cloth and damage your skin, wearing a UV protective cloth can significantly reduce the amount the radiation exposed to your skin as it blocks more UV rays. ",TRUE,false
+Eye_dmg,I don’t need to worry about protecting my eyes from UV rays when I go swimming because water can block it for me.,FALSE,"Sun exposure can't be ignored while swimming, either. Up to 40 percent of UV rays can penetrate shallow water. Also,  water and snow can reflect between 25 and 80 percent of UV rays.",TRUE,false
+Skin_dmg,"As children, I don’t need special attention to UV rays from sun.",FALSE,"Children require special attention, since we tend to spend more time outdoors and can
+burn more easily as young skin is easily damaged by sun exposure.
+One blistering sunburn can double a child's chances of developing Skin cancer later in life.",TRUE,false
+Sunscreen,I need to reapply water-resistant sunscreen after I swim or sweat.,TRUE,"Sunscreen will fade off of your skin by time. Generally, sunscreen should be reapplied every two hours, especially after swimming or sweating. ",TRUE,false
+Sunglasses,"I have a pair of toy sunglasses, I should wear it because it can protect me from UV rays.",FALSE,"Do not use toy sunglasses for your children, as they do not meet the sun protection requirements under the Australian Standard.",TRUE,false
+Hat,"A baseball
+cap doesn’t provide enough
+sun protection.",TRUE,"It only protects part
+of your head and face but
+not all of it",TRUE,false
+Cloth,Wear a t-shirt is better than singlet top when I am playing outside.,TRUE," Because a t-shirt can
+covers more skin.",TRUE,false
+UVR,You can’t get sunburn on a cloudy day.,FALSE,"Up to 80% of the sun's rays can pass through light cloud, mist and fog.",TRUE,false
+UVR,It's good to avoid the sun entirely.,FALSE,"Although sun can cause skin damage, some daily sunlight without sun protection early in the morning (before 10 a.m.) or in the late afternoon is important for proper absorption of vitamin D. ",TRUE,false
+UVR,UV rays are at their strongest between 10am and 4pm,TRUE,UV rays are strong when the sun's rays are the strong. Nearly half of UV radiation is received between 10 a.m. and 4 p.m.,TRUE,false
+UVR,"Can UV radiation be seen
+or felt?",FALSE,"UV radiation can not be seen
+or felt.",TRUE,false

@@ -1,0 +1,6 @@
+UVR,Lens_category,Function,Situation,Glare
+low,0,Fashion spectacles,"Against wind, dust or debris, but not against sun",not against sun
+relative low,1,Fashion spectacles,Partly cloudy days,"limited sun glare reduction,not suitable for driving at night"
+moderate,2,Sunglasses,Normal summer days,medium level of sun glare reduction
+high,3,Sunglasses,On the beach or in the city,high level of sun glare reduction
+extremely high,4,Sunglasses,High glare environments only,"very high level of sun glare reduction,Never wear them while driving"

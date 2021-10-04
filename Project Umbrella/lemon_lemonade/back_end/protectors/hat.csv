@@ -1,0 +1,11 @@
+UVR,Hat_Type,Forehead,Cheeks,Nose,Ears,Chin,Neck,Sum
+low,Not needed,0,0,0,0,0,0,0
+relative low,Not needed,0,0,0,0,0,0,0
+moderate,Baseball cap,9,1,4,1,1,1,17
+high,Brimmed,15,2,7,6,1,2,33
+moderate,Brimmed,15,2,7,6,1,2,33
+high,Bucket,15,2,6,7,1,2,33
+moderate,Bucket,15,2,6,7,1,2,33
+extremely high,Legionnaire's hat,13,3,10,4,1,4,35
+high,Legionnaire's hat,13,3,10,4,1,4,35
+moderate,Legionnaire's hat,13,3,10,4,1,4,35
