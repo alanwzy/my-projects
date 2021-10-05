@@ -1,7 +1,7 @@
 
 
 ### Project Umbrella
-### Team: TA42-Lemon Lemonade
+### Team: Lemon Lemonade
 
 # Introduction
 This a website that provides information on Sunlight Proection.
