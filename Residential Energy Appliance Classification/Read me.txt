@@ -1,0 +1,16 @@
+To run final_imp_model.ipynb following libraries need to be installed by following codes:
+
+# import libraries
+install.packages("randomForest")
+install.packages("ROSE")
+
+Please have the csv files and the notebook in the same folder.
+
+There are four sections 
+1. The first section reads train and test data into notebook.
+2. The second section train classifiers for each of the appliances.
+3. The third section produces predictions on test data.
+4. The fourth section outputs the predictions to csv in correct format.
+
+The tuning of parameters are already done. There should be no problem to run all the codes after the packages are installed.
+
