@@ -11,11 +11,11 @@
 
   <h3 align="center">Welcome and Thanks for checking out my Github</h3>
   <h4 align="center">This repository contains all my data science related projects.
-    <br />
+    <br>
     If you like my project, don't forget to give the project a star!
-    <br />
+    <br>
     Thanks again!:D
-    <br />
+    <br>
   </h4>
 </div>
 
