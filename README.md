@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-[![LinkedIn][linkedin-shield]][https://www.linkedin.com/in/alanwzy/]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
 <br />
@@ -10,11 +10,8 @@
   </a>
 
   <h3 align="center">Welcome and Thanks for checking out my Github!</h3>
-  <br> 
   <h3 align="center">This repository contains all my data science related projects.</h3>
-   <br>
   <h4 align="center"> If you like my project, don't forget to give the project a star!
-    <br>
     Thanks again!:D
   </h4>
   
@@ -27,7 +24,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
+      <a href="#project-overviews">Project Overviews</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
@@ -51,7 +48,7 @@
 
 
 <!-- PROJECTS OVERVIEW-->
-## About My Projects
+## Project Overviews
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
@@ -209,5 +206,5 @@ Use this space to list resources you find helpful and would like to give credit 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 [license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://www.linkedin.com/in/alanwzy/
 [product-screenshot]: images/screenshot.png
