@@ -9,14 +9,14 @@
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Welcome and Thanks for checking out my Github</h3>
+  <h3 align="center">Welcome and Thanks for checking out my Github!</h3>
   <br> 
   <h3 align="center">This repository contains all my data science related projects.</h3>
-    <br>
-    If you like my project, don't forget to give the project a star!
+   <br>
+  <h4 align="center"> If you like my project, don't forget to give the project a star!
     <br>
     Thanks again!:D
-    <br>
+  </h4>
   
 </div>
 
