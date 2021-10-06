@@ -10,15 +10,13 @@
   </a>
 
   <h3 align="center">Welcome and Thanks for checking out my Github</h3>
-
-  <p align="center">
-    This repository contains all my data science related projects.
+  <h4 align="center">This repository contains all my data science related projects.
     <br />
     If you like my project, don't forget to give the project a star!
     <br />
     Thanks again!:D
     <br />
-  </p>
+  </h4>
 </div>
 
 
